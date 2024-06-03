@@ -26,7 +26,7 @@ local Open = Instance.new("ImageButton")
 local UICorner_8 = Instance.new("UICorner")
 
 MainUi.Name = "MainUi"
-MainUi.Parent = game.Workspace
+MainUi.Parent = game.CoreGui
 MainUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainBG.Name = "MainBG"
@@ -261,15 +261,15 @@ local function PlayerName() -- Name.LocalScript
 	local script = Instance.new('LocalScript', Name)
 
 	local player = game.Players.LocalPlayer
-	
+
 	script.Parent.Text = player.Name
-	
+
 end
 coroutine.wrap(PlayerName)()
 local function OnandOff() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
-	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.MouseButton1Down:Connect(function()
 		local Click = script.Parent.Click
 		local Button = script.Parent.Parent.Button
 		local Copy = script.Parent.Parent.CopyDiscord
@@ -277,7 +277,7 @@ local function OnandOff() -- Open.LocalScript
 		local Header = script.Parent.Parent.Header
 		local Background = script.Parent.Parent.MainBG
 		local OnSwicth = script.Parent.Parent.On
-		
+
 		if OnSwicth.Value == false then
 			Click:Play()
 			OnSwicth.Value = true
@@ -296,6 +296,6 @@ local function OnandOff() -- Open.LocalScript
 			Background.Visible = false
 		end
 	end)
-	
+
 end
 coroutine.wrap(OnandOff)()
