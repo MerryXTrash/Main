@@ -1,4 +1,3 @@
-local Tp = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local MainUi = Instance.new("ScreenGui")
 local MainBG = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -28,7 +27,7 @@ local UICorner_8 = Instance.new("UICorner")
 -- Properties
 
 MainUi.Name = "MainUi"
-MainUi.Parent = game.Workspace
+MainUi.Parent = game.CoreGui
 MainUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainBG.Name = "MainBG"
@@ -38,6 +37,7 @@ MainBG.BorderColor3 = Color3.new(0, 0, 0)
 MainBG.BorderSizePixel = 0
 MainBG.Position = UDim2.new(0.281672746, 0, 0.24382706, 0)
 MainBG.Size = UDim2.new(0.448093534, 0, 0.525925815, 0)
+MainBG.Visible = false
 
 UICorner.Parent = MainBG
 UICorner.CornerRadius = UDim.new(0, 15)
@@ -50,6 +50,7 @@ Header.BorderColor3 = Color3.new(0, 0, 0)
 Header.BorderSizePixel = 0
 Header.Position = UDim2.new(0.281672746, 0, 0.24382706, 0)
 Header.Size = UDim2.new(0.448093534, 0, 0.0872978494, 0)
+Header.Visible = false
 
 UICorner_2.Parent = Header
 UICorner_2.CornerRadius = UDim.new(0, 15)
@@ -169,6 +170,7 @@ Button.BorderColor3 = Color3.new(0, 0, 0)
 Button.BorderSizePixel = 0
 Button.Position = UDim2.new(0.402941048, 0, 0.444954097, 0)
 Button.Size = UDim2.new(0.207054228, 0, 0.106554523, 0)
+Button.Visible = false
 
 UICorner_5.Parent = Button
 UICorner_5.CornerRadius = UDim.new(0, 20)
@@ -186,9 +188,6 @@ Skip.Text = "Skip"
 Skip.TextColor3 = Color3.new(1, 1, 1)
 Skip.TextSize = 35
 Skip.TextWrapped = true
-Skip.MouseButton1Down:Connect(function()
-	Tp = CFrame.new()
-end)
 
 Footer.Name = "Footer"
 Footer.Parent = MainUi
@@ -198,6 +197,7 @@ Footer.BorderColor3 = Color3.new(0, 0, 0)
 Footer.BorderSizePixel = 0
 Footer.Position = UDim2.new(0.281672746, 0, 0.693153203, 0)
 Footer.Size = UDim2.new(0.448093534, 0, 0.0766006261, 0)
+Footer.Visible = false
 
 UICorner_6.Parent = Footer
 UICorner_6.CornerRadius = UDim.new(0, 15)
@@ -210,6 +210,7 @@ CopyDiscord.BorderColor3 = Color3.new(0, 0, 0)
 CopyDiscord.BorderSizePixel = 0
 CopyDiscord.Position = UDim2.new(0.586041093, 0, 0.714550018, 0)
 CopyDiscord.Size = UDim2.new(0.133245304, 0, 0.0316679217, 0)
+CopyDiscord.Visible = false
 
 UICorner_7.Parent = CopyDiscord
 UICorner_7.CornerRadius = UDim.new(0, 20)
@@ -233,8 +234,8 @@ Open.Parent = MainUi
 Open.BackgroundColor3 = Color3.new(1, 1, 1)
 Open.BorderColor3 = Color3.new(0, 0, 0)
 Open.BorderSizePixel = 0
-Open.Position = UDim2.new(0.100861005, 0, 0.129629627, 0)
-Open.Size = UDim2.new(0.100000001, 0, 0.1570988, 0)
+Open.Position = UDim2.new(0.100860998, 0, 0.129629627, 0)
+Open.Size = UDim2.new(0.113530137, 0, 0.185852781, 0)
 Open.Image = "rbxassetid://17233467248"
 
 UICorner_8.Parent = Open
@@ -242,7 +243,7 @@ UICorner_8.CornerRadius = UDim.new(0, 15)
 
 -- Scripts
 
-local function TILU_fake_script() -- Profile.LocalScript 
+local function XEXL_fake_script() -- Profile.LocalScript 
 	local script = Instance.new('LocalScript', Profile)
 
 	local Players = game:GetService("Players")
@@ -250,8 +251,8 @@ local function TILU_fake_script() -- Profile.LocalScript
 	local imagelabel = script.Parent.Parent.Profile
 	imagelabel.Image = Players:GetUserThumbnailAsync(player.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
 end
-coroutine.wrap(TILU_fake_script)()
-local function AKOH_fake_script() -- Name.LocalScript 
+coroutine.wrap(XEXL_fake_script)()
+local function CWPFI_fake_script() -- Name.LocalScript 
 	local script = Instance.new('LocalScript', Name)
 
 	local player = game.Players.LocalPlayer
@@ -259,11 +260,11 @@ local function AKOH_fake_script() -- Name.LocalScript
 	script.Parent.Text = player.Name
 	
 end
-coroutine.wrap(AKOH_fake_script)()
-local function KYKFPR_fake_script() -- Open.LocalScript 
+coroutine.wrap(CWPFI_fake_script)()
+local function WZDRIY_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
-	script.Parent.MouseButton1Down:Connect(function()
+	script.Parent.MouseButton1Click:Connect(function()
 		local Click = script.Parent.Click
 		local Button = script.Parent.Parent.Button
 		local Copy = script.Parent.Parent.CopyDiscord
@@ -292,4 +293,4 @@ local function KYKFPR_fake_script() -- Open.LocalScript
 	end)
 	
 end
-coroutine.wrap(KYKFPR_fake_script)()
+coroutine.wrap(WZDRIY_fake_script)()
