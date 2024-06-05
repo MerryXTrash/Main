@@ -1,7 +1,7 @@
 local TP = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/Arceus-X-UI-Library/main/source.lua"))()
 lib:SetTitle("Xerloraity HUB | The Mimic")
-lib:SetIcon("rbxassetid://17381278901")
+lib:SetIcon("rbxassetid://17233467248")
 
 lib:AddButton("Skip", function()
     TP = CFrame.new()
