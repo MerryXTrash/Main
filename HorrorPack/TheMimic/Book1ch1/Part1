@@ -1,4 +1,4 @@
-local tp = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local Tp = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local MainUi = Instance.new("ScreenGui")
 local MainBG = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -25,8 +25,10 @@ local Copy = Instance.new("TextButton")
 local Open = Instance.new("ImageButton")
 local UICorner_8 = Instance.new("UICorner")
 
+-- Properties
+
 MainUi.Name = "MainUi"
-MainUi.Parent = game.CoreGui
+MainUi.Parent = game.Workspace
 MainUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainBG.Name = "MainBG"
@@ -34,9 +36,8 @@ MainBG.Parent = MainUi
 MainBG.BackgroundColor3 = Color3.new(1, 1, 1)
 MainBG.BorderColor3 = Color3.new(0, 0, 0)
 MainBG.BorderSizePixel = 0
-MainBG.Position = UDim2.new(0.314883053, 0, 0.310185164, 0)
-MainBG.Size = UDim2.new(0.368142784, 0, 0.379321098, 0)
-MainBG.Visible = false
+MainBG.Position = UDim2.new(0.281672746, 0, 0.24382706, 0)
+MainBG.Size = UDim2.new(0.448093534, 0, 0.525925815, 0)
 
 UICorner.Parent = MainBG
 UICorner.CornerRadius = UDim.new(0, 15)
@@ -47,9 +48,8 @@ Header.BackgroundColor3 = Color3.new(1, 1, 1)
 Header.BackgroundTransparency = 1
 Header.BorderColor3 = Color3.new(0, 0, 0)
 Header.BorderSizePixel = 0
-Header.Position = UDim2.new(0.314883083, 0, 0.310185194, 0)
-Header.Size = UDim2.new(0.368142754, 0, 0.062963061, 0)
-Header.Visible = false
+Header.Position = UDim2.new(0.281672746, 0, 0.24382706, 0)
+Header.Size = UDim2.new(0.448093534, 0, 0.0872978494, 0)
 
 UICorner_2.Parent = Header
 UICorner_2.CornerRadius = UDim.new(0, 15)
@@ -89,7 +89,7 @@ GameLabel.BorderSizePixel = 0
 GameLabel.Position = UDim2.new(0.00334102684, 0, 1.15196049, 0)
 GameLabel.Size = UDim2.new(0.996658862, 0, 0.980389118, 0)
 GameLabel.Font = Enum.Font.Arcade
-GameLabel.Text = "Book 1 Chapter 1 Part 1"
+GameLabel.Text = "Book ? Chapter ? Part ?"
 GameLabel.TextColor3 = Color3.new(1, 1, 1)
 GameLabel.TextScaled = true
 GameLabel.TextSize = 14
@@ -167,9 +167,8 @@ Button.BackgroundColor3 = Color3.new(0, 0, 0)
 Button.BackgroundTransparency = 0.5
 Button.BorderColor3 = Color3.new(0, 0, 0)
 Button.BorderSizePixel = 0
-Button.Position = UDim2.new(0.414514154, 0, 0.455246925, 0)
-Button.Size = UDim2.new(0.170110717, 0, 0.0768518597, 0)
-Button.Visible = false
+Button.Position = UDim2.new(0.402941048, 0, 0.444954097, 0)
+Button.Size = UDim2.new(0.207054228, 0, 0.106554523, 0)
 
 UICorner_5.Parent = Button
 UICorner_5.CornerRadius = UDim.new(0, 20)
@@ -188,7 +187,7 @@ Skip.TextColor3 = Color3.new(1, 1, 1)
 Skip.TextSize = 35
 Skip.TextWrapped = true
 Skip.MouseButton1Down:Connect(function()
-	tp = CFrame.new()
+	Tp = CFrame.new()
 end)
 
 Footer.Name = "Footer"
@@ -197,9 +196,8 @@ Footer.BackgroundColor3 = Color3.new(1, 1, 1)
 Footer.BackgroundTransparency = 1
 Footer.BorderColor3 = Color3.new(0, 0, 0)
 Footer.BorderSizePixel = 0
-Footer.Position = UDim2.new(0.314883083, 0, 0.634259224, 0)
-Footer.Size = UDim2.new(0.368142754, 0, 0.0552477427, 0)
-Footer.Visible = false
+Footer.Position = UDim2.new(0.281672746, 0, 0.693153203, 0)
+Footer.Size = UDim2.new(0.448093534, 0, 0.0766006261, 0)
 
 UICorner_6.Parent = Footer
 UICorner_6.CornerRadius = UDim.new(0, 15)
@@ -210,9 +208,8 @@ CopyDiscord.BackgroundColor3 = Color3.new(0, 0, 0)
 CopyDiscord.BackgroundTransparency = 0.5
 CopyDiscord.BorderColor3 = Color3.new(0, 0, 0)
 CopyDiscord.BorderSizePixel = 0
-CopyDiscord.Position = UDim2.new(0.564944625, 0, 0.649691522, 0)
-CopyDiscord.Size = UDim2.new(0.109471135, 0, 0.0228403397, 0)
-CopyDiscord.Visible = false
+CopyDiscord.Position = UDim2.new(0.586041093, 0, 0.714550018, 0)
+CopyDiscord.Size = UDim2.new(0.133245304, 0, 0.0316679217, 0)
 
 UICorner_7.Parent = CopyDiscord
 UICorner_7.CornerRadius = UDim.new(0, 20)
@@ -230,9 +227,6 @@ Copy.Text = "Copy Discord"
 Copy.TextColor3 = Color3.new(1, 1, 1)
 Copy.TextSize = 15
 Copy.TextWrapped = true
-Copy.MouseButton1Down:Connect(function()
-	setclipboard(Discord)
-end)
 
 Open.Name = "Open"
 Open.Parent = MainUi
@@ -240,7 +234,7 @@ Open.BackgroundColor3 = Color3.new(1, 1, 1)
 Open.BorderColor3 = Color3.new(0, 0, 0)
 Open.BorderSizePixel = 0
 Open.Position = UDim2.new(0.100861005, 0, 0.129629627, 0)
-Open.Size = UDim2.new(0.100000001, 0, 0.123148166, 0)
+Open.Size = UDim2.new(0.100000001, 0, 0.1570988, 0)
 Open.Image = "rbxassetid://17233467248"
 
 UICorner_8.Parent = Open
@@ -248,7 +242,7 @@ UICorner_8.CornerRadius = UDim.new(0, 15)
 
 -- Scripts
 
-local function PlayerPF() -- Profile.LocalScript 
+local function TILU_fake_script() -- Profile.LocalScript 
 	local script = Instance.new('LocalScript', Profile)
 
 	local Players = game:GetService("Players")
@@ -256,17 +250,17 @@ local function PlayerPF() -- Profile.LocalScript
 	local imagelabel = script.Parent.Parent.Profile
 	imagelabel.Image = Players:GetUserThumbnailAsync(player.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
 end
-coroutine.wrap(PlayerPF)()
-local function PlayerName() -- Name.LocalScript 
+coroutine.wrap(TILU_fake_script)()
+local function AKOH_fake_script() -- Name.LocalScript 
 	local script = Instance.new('LocalScript', Name)
 
 	local player = game.Players.LocalPlayer
-
+	
 	script.Parent.Text = player.Name
-
+	
 end
-coroutine.wrap(PlayerName)()
-local function OnandOff() -- Open.LocalScript 
+coroutine.wrap(AKOH_fake_script)()
+local function KYKFPR_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -277,7 +271,7 @@ local function OnandOff() -- Open.LocalScript
 		local Header = script.Parent.Parent.Header
 		local Background = script.Parent.Parent.MainBG
 		local OnSwicth = script.Parent.Parent.On
-
+		
 		if OnSwicth.Value == false then
 			Click:Play()
 			OnSwicth.Value = true
@@ -296,6 +290,6 @@ local function OnandOff() -- Open.LocalScript
 			Background.Visible = false
 		end
 	end)
-
+	
 end
-coroutine.wrap(OnandOff)()
+coroutine.wrap(KYKFPR_fake_script)()
